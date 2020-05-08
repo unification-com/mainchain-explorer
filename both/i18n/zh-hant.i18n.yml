@@ -252,6 +252,7 @@ messageTypes:
     IBCReceive: 'IBC Receive'
     enterprisePurchase: 'Purchase Enterprise UND'
     enterpriseProcess: 'Process Enterprise Purchase Order'
+    enterpriseWhitelist: 'Enterprise Whitelist Address'
     wrkchainRegister: 'Register WRKChain'
     wrkchainRecord: 'Record WRKChain Hashes'
     beaconRegister: 'Register BEACON'
