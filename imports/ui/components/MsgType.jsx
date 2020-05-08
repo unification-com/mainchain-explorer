@@ -55,6 +55,8 @@ export const MsgType = (props) => {
         return <Badge color="info"><T>messageTypes.enterprisePurchase</T></Badge>
     case "enterprise/ProcessUndPurchaseOrder":
         return <Badge color="info"><T>messageTypes.enterpriseProcess</T></Badge>
+    case "enterprise/WhitelistAddress":
+        return <Badge color="info"><T>messageTypes.enterpriseWhitelist</T></Badge>
 
         //wrkchain
     case "wrkchain/RegisterWrkChain":

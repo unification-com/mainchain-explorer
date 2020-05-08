@@ -226,4 +226,10 @@ messageTypes:
     unjail: 'Un-Джейл'
     IBCTransfer: 'IBC Трансферт'
     IBCReceive: 'IBC Получение'
-
+    enterprisePurchase: 'Purchase Enterprise UND'
+    enterpriseProcess: 'Process Enterprise Purchase Order'
+    enterpriseWhitelist: 'Enterprise Whitelist Address'
+    wrkchainRegister: 'Register WRKChain'
+    wrkchainRecord: 'Record WRKChain Hashes'
+    beaconRegister: 'Register BEACON'
+    beaconRecord: 'Record BEACON Timestamp'
