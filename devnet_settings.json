@@ -1,43 +1,49 @@
 {
-    "public":{
-        "chainName": "UND Devnet",
-        "chainId": "UND-Mainchain-DevNet",
-        "gtm": "{Add your Google Tag Manager ID here}",
-        "slashingWindow": 10000,
-        "uptimeWindow": 250,
-        "initialPageSize": 30,
-        "bech32PrefixAccAddr": "und",
-        "bech32PrefixAccPub": "undpub",
-        "bech32PrefixValAddr": "undvaloper",
-        "bech32PrefixValPub": "undvaloperpub",
-        "bech32PrefixConsAddr": "undvalcons",
-        "bech32PrefixConsPub": "undvalconspub",
-        "stakingDenom": "UND",
-        "stakingDenomPlural": "UNDs",
-        "mintingDenom": "nund",
-        "stakingFraction": 1000000000,
-        "gasPrice": 0.025,
-        "coingeckoId": "unification",
-        "powerReduction": 1000000
-    },
-    "genesisFile": "http://localhost:1318/devnet_genesis/genesis.json",
-    "remote":{
-        "rpc":"http://localhost:26661",
-        "lcd":"http://localhost:1317"
-    },
-    "debug": {
-        "startTimer": true,
-        "readGenesis": true
-    },
-    "params":{
-        "startHeight": 0,
-        "defaultBlockTime": 5000,
-        "blockInterval": 15000,
-        "consensusInterval": 1000,
-        "statusInterval":7500,
-        "signingInfoInterval": 1800000,
-        "proposalInterval": 5000,
-        "missedBlocksInterval": 60000,
-        "delegationInterval": 900000
-    }
+  "public":{
+    "chainName": "Unification DevNet",
+    "chainId": "FUND-Mainchain-DevNet",
+    "gtm": "",
+    "slashingWindow": 10000,
+    "uptimeWindow": 250,
+    "initialPageSize": 30,
+    "secp256k1": false,
+    "bech32PrefixAccAddr": "und",
+    "bech32PrefixAccPub": "undpub",
+    "bech32PrefixValAddr": "undvaloper",
+    "bech32PrefixValPub": "undvaloperpub",
+    "bech32PrefixConsAddr": "undvalcons",
+    "bech32PrefixConsPub": "undvalconspub",
+    "bondDenom": "nund",
+    "powerReduction": 1000000,
+    "coins": [
+      {
+        "denom": "nund",
+        "displayName": "FUND",
+        "displayNamePlural": "FUNDs",
+        "fraction": 1000000000
+      }
+    ],
+    "gasPrice": 0.25,
+    "coingeckoId": "unification"
+  },
+  "genesisFile": "http://localhost:1318/devnet_genesis/genesis.json",
+  "remote":{
+    "rpc":"http://localhost:26661",
+    "lcd":"http://localhost:1318"
+  },
+  "debug": {
+    "startTimer": true,
+    "readGenesis": true
+  },
+  "params":{
+    "startHeight": 0,
+    "defaultBlockTime": 5000,
+    "blockInterval": 15000,
+    "consensusInterval": 1000,
+    "statusInterval":7500,
+    "signingInfoInterval": 1800000,
+    "proposalInterval": 5000,
+    "missedBlocksInterval": 60000,
+    "delegationInterval": 900000
+  }
 }
