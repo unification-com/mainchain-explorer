@@ -1,6 +1,6 @@
 {
   "public":{
-    "chainName": "UND TestNet",
+    "chainName": "Unification TestNet",
     "chainId": "UND-Mainchain-TestNet-v6",
     "gtm": "",
     "slashingWindow": 10000,
@@ -18,8 +18,8 @@
     "coins": [
       {
         "denom": "nund",
-        "displayName": "UND",
-        "displayNamePlural": "UND",
+        "displayName": "FUND",
+        "displayNamePlural": "FUND",
         "fraction": 1000000000
       }
     ],
