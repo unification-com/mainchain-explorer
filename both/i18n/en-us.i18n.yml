@@ -54,7 +54,7 @@ chainStates:
     totalSupply: 'Total Supply'
 chainStatus:
     startMessage: 'The chain is going to start in'
-    stopWarning: 'The chain appears to be stopped for <em>{$time}</em>! Feed me with new blocks 😭!'
+    stopWarning: 'The block explorer could not query RPC for <em>{$time}</em>! Feed me with new blocks 😭!'
     latestHeight: 'Latest Block Height'
     averageBlockTime: 'Average Block Time'
     all: 'All'
