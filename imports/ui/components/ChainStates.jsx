@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Link } from 'react-router-dom';
-import { Card, CardHeader, Row, Col } from 'reactstrap';
+import {Card, CardHeader, Row, Col, DropdownMenu} from 'reactstrap';
 import numbro from 'numbro';
 import i18n from 'meteor/universe:i18n';
 import Coin from '/both/utils/coins.js'
@@ -70,7 +70,7 @@ export default class ChainStates extends Component{
 
         if (this.props.chainStates.totalSupply != prevProps.chainStates.totalSupply){
             if(this.props.chainStates.totalSupply) {
-                let totalSupply = new Coin(this.props.chainStates.totalSupply, "nund").toString(4)
+                let totalSupply = new Coin(this.props.chainStates.totalSupply, "nund").toString(1)
                 this.setState({
                     totalSupply: totalSupply
                 })
@@ -95,7 +95,7 @@ export default class ChainStates extends Component{
             <CardHeader>
                 <Row className="text-nowrap">
                     <Col xs={4} md="auto"><small><span><T>chainStates.price</T>:</span> <strong>${this.state.price}</strong></small></Col>
-                    <Col xs={8} md="auto"><small><span><T>chainStates.marketCap</T>:</span> <strong>{this.state.marketCap}</strong></small></Col>
+                    {/* <Col xs={8} md="auto"><small><span><T>chainStates.marketCap</T>:</span> <strong>{this.state.marketCap}</strong></small></Col> */}
                     <Col xs={4} md="auto"><small><span><T>chainStates.totalSupply</T>:</span> <strong>{this.state.totalSupply}</strong></small></Col>
                     <Col xs={8} md="auto"><small><span><T>chainStates.communityPool</T>:</span> <strong>{(this.renderValues(this.state.communityPool))}</strong></small></Col>
                 </Row>
