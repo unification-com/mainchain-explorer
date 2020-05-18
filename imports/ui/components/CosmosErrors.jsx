@@ -194,6 +194,7 @@ export default class CosmosErrors extends Component {
             error: errors.sdk[1],
             message: ""
         }
+
         if (props.logs){
             if (props.logs.length > 0){
                 for (let i in props.logs){
@@ -220,6 +221,18 @@ export default class CosmosErrors extends Component {
             }
         }
         else{
+            try {
+                this.state = {
+                    error: errors[props.codespace][props.code],
+                    message: props.raw_log
+                }
+            }
+            catch (e){
+                this.state = {
+                    error: errors.sdk[1],
+                    message: ""
+                }
+            }
             if (props.code == 11){
                 this.state = {
                     error: errors.sdk[11],
