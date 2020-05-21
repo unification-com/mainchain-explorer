@@ -106,14 +106,14 @@ export default class Activites extends Component {
             if(msg.value.decision == 'reject') {
                 decisionClass = 'text-danger'
             }
-            return <p><Account address={msg.value.signer}/> {(this.props.invalid)?<T>activities.failedTo</T>:''} <MsgType type={msg.type} /> PO {msg.value.id}  <T>activities.decision</T>: <em className={decisionClass}>{msg.value.decision}</em></p>;
+            return <p><Account address={msg.value.signer}/> {(this.props.invalid)?<T>activities.failedTo</T>:''} <MsgType type={msg.type} /> <em className={decisionClass}>{msg.value.decision}</em> PO #{msg.value.id} </p>;
 
         case "enterprise/WhitelistAddress":
             let wlActionClass = 'text-success'
             if(msg.value.action == 'remove') {
                 wlActionClass = 'text-danger'
             }
-            return <p><Account address={msg.value.signer}/> {(this.props.invalid)?<T>activities.failedTo</T>:''} <MsgType type={msg.type} /> <em className={wlActionClass}>{msg.value.action}</em> {msg.value.address}</p>;
+            return <p><Account address={msg.value.signer}/> {(this.props.invalid)?<T>activities.failedTo</T>:''} <MsgType type={msg.type} /> <em className={wlActionClass}>{msg.value.action}</em> <Account address={msg.value.address}/></p>;
 
         case "wrkchain/RegisterWrkChain":
             return <p><Account address={msg.value.owner}/> {(this.props.invalid)?<T>activities.failedTo</T>:''} <MsgType type={msg.type} /> {msg.value.moniker}</p>
