@@ -14,7 +14,6 @@ export default TransactionsContainer = withTracker((props) => {
 
     if (Meteor.isServer || !loading){
         transactions = Transactions.find({}, {sort:{height:-1}});
-
         if (Meteor.isServer){
             loading = false;
             transactionsExist = !!transactions;
@@ -70,7 +69,8 @@ export default TransactionsContainer = withTracker((props) => {
         enterpriseTxs: transactionsExist ? Transactions.find({
             $or: [
                 {"tx.value.msg.type":"enterprise/PurchaseUnd"},
-                {"tx.value.msg.type":"enterprise/ProcessUndPurchaseOrder"}
+                {"tx.value.msg.type":"enterprise/ProcessUndPurchaseOrder"},
+                {"tx.value.msg.type":"enterprise/WhitelistAddress"}
             ]
         }).fetch() : {},
         wrkchainTxs: transactionsExist ? Transactions.find({
