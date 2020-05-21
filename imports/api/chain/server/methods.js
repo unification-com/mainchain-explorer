@@ -199,7 +199,10 @@ Meteor.methods({
                     params: genesis.app_state.slashing.params
                 },
                 supply: genesis.app_state.supply,
-                crisis: genesis.app_state.crisis
+                crisis: genesis.app_state.crisis,
+                wrkchain: genesis.app_state.wrkchain,
+                beacon: genesis.app_state.beacon,
+                enterprise: genesis.app_state.enterprise,
             }
 
 	    if (genesis.app_state.gov) {
@@ -305,7 +308,6 @@ Meteor.methods({
             chainParams.readGenesis = true;
             chainParams.activeVotingPower = totalVotingPower;
             let result = Chain.upsert({chainId:chainParams.chainId}, {$set:chainParams});
-
 
             console.log('=== Finished processing genesis file ===');
 
